@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>詹子萱 — 個人履歷</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#ffffff;--accent:#6c63ff;--muted:#6b7280;--glass:rgba(108,99,255,0.08)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans CJK TC", "Helvetica Neue", Arial; background:linear-gradient(180deg,var(--bg),#ffffff);color:#111}
+    .container{max-width:1000px;margin:36px auto;padding:24px}
+    .card{background:var(--card);border-radius:14px;padding:28px;box-shadow:0 8px 24px rgba(16,24,40,0.06)}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:16px;flex:0 0 120px;background:linear-gradient(135deg,var(--glass),transparent);display:flex;align-items:center;justify-content:center}
+    .avatar svg{width:80px;height:80px;opacity:.9}
+    h1{margin:0;font-size:26px}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .meta{margin-left:auto;text-align:right}
+    .btns{display:flex;gap:8px;margin-top:8px}
+    .btn{padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:#fff;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(108,99,255,0.12)}
+    main{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:20px}
+    section{background:linear-gradient(180deg,rgba(0,0,0,0),transparent)}
+    .card-block{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfbff);border:1px solid rgba(16,24,40,0.03)}
+    h2{margin:0 0 12px 0;font-size:16px}
+    p{margin:0 0 8px 0;color:#222}
+    .muted{color:var(--muted);font-size:14px}
+    ul{padding-left:18px;margin:8px 0}
+    li{margin-bottom:6px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(99,102,241,0.12);padding:6px 10px;border-radius:999px;font-size:13px}
+    .timeline{display:flex;flex-direction:column;gap:10px}
+    .item{padding:12px;border-radius:10px;border:1px solid rgba(16,24,40,0.03);background:#fff}
+    .item .title{font-weight:600}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:880px){main{grid-template-columns:1fr;}.meta{text-align:left;margin-left:0}}
+    /* small print layout for printing */
+    @media print{body{background:transparent} .btns, .meta .hidden-print{display:none} .container{margin:0;padding:0} .card{box-shadow:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header>
+        <div class="avatar" aria-hidden="true">
+          <!-- simple SVG avatar -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="6" fill="url(#g)"/>
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#B794F4"/>
+                <stop offset="1" stop-color="#6C63FF"/>
+              </linearGradient>
+            </defs>
+            <g fill="#fff" opacity="0.95">
+              <path d="M12 12a3 3 0 100-6 3 3 0 000 6z"/>
+              <path d="M4 20a8 8 0 0116 0v1H4v-1z"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <h1>詹子萱（Tzu‑Hsuan, Jenna）</h1>
+          <div class="subtitle">亞洲大學 經營管理系 · 大一</div>
+          <div class="muted">目標：結合企業管理與表演藝術經驗，投入活動策劃 / 文化管理 / 企劃類職務</div>
+          <div class="btns">
+            <button class="btn" id="exportPDF">匯出 PDF</button>
+            <button class="btn" onclick="window.print()">列印 / 另存為 PDF</button>
+            <button class="btn ghost" id="copyBtn">複製履歷文字</button>
+            <button class="btn ghost" id="toggleTheme">切換深色</button>
+          </div>
+        </div>
+        <div class="meta hidden-print">
+          <div class="card-block" style="min-width:200px">
+            <div class="muted">聯絡資訊</div>
+            <div style="margin-top:8px">電話：<strong>+886-9xx-xxx-xxx</strong></div>
+            <div>電子郵件：<a href="mailto:your.email@example.com">your.email@example.com</a></div>
+            <div style="margin-top:8px" class="muted">技能標籤</div>
+            <div class="skill-list" style="margin-top:8px">
+              <span class="skill">企劃與活動統籌</span>
+              <span class="skill">影片採訪/剪輯</span>
+              <span class="skill">溝通協調</span>
+              <span class="skill">簡報&演說</span>
+              <span class="skill">辦公軟體</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <div class="card-block">
+            <h2>自我介紹</h2>
+            <p>我叫詹子萱，現為亞洲大學經營管理系一年級學生。從小受母親影響熱愛自我管理與承擔責任，並在高中投入表演藝術與影展策劃，擁有舞台表演、活動統籌與紀錄片拍攝經驗。喜歡透過實作把想法變成可看見的成果，擅長跨團隊溝通與時間管理。</p>
+
+            <h2 style="margin-top:16px">教育背景</h2>
+            <div class="timeline">
+              <div class="item">
+                <div class="title">亞洲大學 — 經營管理系（在學）</div>
+                <div class="muted">2025.09 — 現在 · 大一</div>
+                <div style="margin-top:8px">學習重點：企業管理、行銷、專案管理、統計與資料應用。</div>
+              </div>
+
+              <div class="item">
+                <div class="title">新民高中 — 表演藝術科（畢業）</div>
+                <div class="muted">2021 — 2025</div>
+                <div style="margin-top:8px">過程中參與戲劇、歌唱、畢製行政、畢業製作與影展統籌等多樣實務。</div>
+              </div>
+            </div>
+
+            <h2 style="margin-top:16px">專業與專案經驗</h2>
+            <ul>
+              <li><strong>校園午餐團膳紀錄片（拍攝中）</strong> — 探討學生對團膳的反應與制度面，負責採訪、訪談與內容結構規劃（品質 / 制度 / 環境三大面向）。</li>
+              <li><strong>全國青少年影展 — 統籌</strong> — 負責整體節目安排、工作組分工與放映流程，與跨校影片版權與聯絡窗口協作。</li>
+              <li><strong>畢業製作行政組組長</strong> — 協調兩班合作、節目排程、後勤與示演溝通。</li>
+            </ul>
+
+            <h2 style="margin-top:16px">表演與領導</h2>
+            <ul>
+              <li>擔任歌唱比賽、表演節目主唱，並多次參與校內外展演。</li>
+              <li>策展與擔任活動統籌，帶領團隊完成影展與公演。</li>
+            </ul>
+
+            <h2 style="margin-top:16px">語言能力</h2>
+            <ul>
+              <li>中文（母語）</li>
+              <li>英文（中等，可做課堂簡短發言與基本商務書信）</li>
+              <li>泰語（舞台劇台詞使用過，基礎會話）</li>
+            </ul>
+
+          </div>
+        </section>
+
+        <aside>
+          <div class="card-block">
+            <h2>重要亮點</h2>
+            <ul>
+              <li>影展統籌：規劃五個工作組並成功播放獲獎影片</li>
+              <li>畢製行政組長：跨班協調、排程與執行</li>
+              <li>紀錄片採訪：已訪談三位受訪者（兩位老師、一位廠商代表）</li>
+              <li>校慶歌唱比賽第二名（2024）</li>
+            </ul>
+
+            <h2 style="margin-top:14px">技能細節</h2>
+            <div class="muted">影片與多媒體</div>
+            <ul>
+              <li>採訪 / 逐字稿整理 / 影片剪輯（基本剪輯工具）</li>
+            </ul>
+            <div class="muted" style="margin-top:8px">軟技能</div>
+            <ul>
+              <li>團隊協作、溝通、時間管理、活動企劃</li>
+            </ul>
+
+            <h2 style="margin-top:14px">興趣／其他</h2>
+            <ul>
+              <li>劇場與表演藝術</li>
+              <li>旅行、紀實攝影</li>
+              <li>家中有一隻小橘貓（個性由兇到親近）</li>
+            </ul>
+
+            <h2 style="margin-top:14px">作品連結</h2>
+            <p class="muted">（可將影片、作品集或影片連結放在這裡）</p>
+            <p><a href="#" id="portfolioLink">新增/設定作品連結</a></p>
+
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <div class="muted">欲修改內容、調整設計或匯出格式（繁體中文 / 英文 / 簡歷版 / 一頁簡潔版），請告訴我你要改哪些欄位或想呈現的風格。</div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // Export PDF button triggers print
+    document.getElementById('exportPDF').addEventListener('click', ()=>{
+      window.print();
+    });
+
+    // small interactive JS: copy text, theme toggle, set portfolio link
+    document.getElementById('copyBtn').addEventListener('click', async ()=>{
+      const text = document.querySelector('.card').innerText;
+      try{
+        await navigator.clipboard.writeText(text);
+        alert('已複製履歷文字到剪貼簿，方便貼到 Word 或信件。');
+      }catch(e){
+        alert('複製失敗，請手動選取文字複製。');
+      }
+    });
+
+    const toggleBtn = document.getElementById('toggleTheme');
+    toggleBtn.addEventListener('click', ()=>{
+      if(document.documentElement.style.getPropertyValue('--bg') === '#f6f7fb'){
+        document.documentElement.style.setProperty('--bg','#0b1020');
+        document.documentElement.style.setProperty('--card','#081028');
+        document.documentElement.style.setProperty('--accent','#8b5cf6');
+        document.documentElement.style.setProperty('--muted','#9aa4c0');
+        document.body.style.color='#eef2ff';
+      }else{
+        document.documentElement.style.setProperty('--bg','#f6f7fb');
+        document.documentElement.style.setProperty('--card','#ffffff');
+        document.documentElement.style.setProperty('--accent','#6c63ff');
+        document.documentElement.style.setProperty('--muted','#6b7280');
+        document.body.style.color='#111';
+      }
+    });
+
+    document.getElementById('portfolioLink').addEventListener('click', (e)=>{
+      e.preventDefault();
+      const url = prompt('請輸入作品集或影片連結 (以 https:// 開頭)：');
+      if(url){
+        e.target.href = url;
+        e.target.textContent = url;
+      }
+    });
+  </script>
+</body>
+</html>
